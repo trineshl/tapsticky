@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" async href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="icon.png" type="image/png">
   <title>Tap Sticky</title>
 </head>
-<body>
-  <h1>Tap Sticky</h1>
+
+<body class="RootContainer VBox">
+
+  <div class="HBox Header">
+    <!-- <i class="fa-solid fa-note-sticky fa-2x"></i> -->
+    <img src="icon.png" alt="Sticky Paper" width="50" height="50" style="margin-right: 5px;">
+    <h1>Tap Sticky</h1>
+    <span class="Flex1"></span>
+    <button onclick="pvtHandleOnOverviewBtnClick()" type="button" class="Header-Btns">Overview</button>
+    <button onclick="pvtHandleOnFeatureBtnClick()" type="button" class="Header-Btns">Features</button>
+    <button onclick="pvtHandleOnDownloadBtnClick()" type="button" class="Header-Btns">Download</button>
+    <button onclick="pvtHandleOnProfileBtnClick()" type="button" class="Header-Btns">Profile</button>
+    <button onclick="pvtHandleOnReposBtnClick()" type="button" title="Open Git Repository" class="Header-Btns">
+      <i class="fab fa-github fa-2x"></i>
+    </button>
+  </div>
+
+  <div class="Flex1 OverFlowAuto VBox">
+
+    <div class="HBox InnerHBoxDiv" id="overview-div">
+      <div class="Flex1" style="margin: 0 50px 0 0; text-align: right;">
+        <img src="imgs/sample-text.png" class="Responsive" style="max-width: 315px;" alt="Sticky Paper">
+      </div>
+      <div class="Flex1" style="margin: auto;">
+        <div class="Max-Content">
+          <h2 class="SubHeader">Overview</h2>
+
+          <p class="Paragraph">
+            TapSticky is a versatile desktop application designed to streamline your note-taking process with a blend of
+            traditional sticky notes' simplicity and modern functionality.
+          </p>
+
+          <p class="Paragraph">
+            It caters to users who need quick access to
+            notes while maintaining productivity through its unique "pinning" feature.
+          </p>
+
+          <p class="Paragraph">
+            Whether you're jotting down quick reminders or creating detailed
+            notes, TapSticky makes it effortless and intuitive.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="HBox InnerHBoxDiv" id="feature-div">
+      <div class="VBox Flex1" style="padding: 0 50px 0 0;align-items: end;">
+        <div class="Max-Content">
+          <h2 class="SubHeader">Key Features</h2>
+          <p class="Paragraph">
+            <strong>Pinning Window:</strong> TapSticky allows you to pin its window to ensure it remains visible above
+            all other applications, providing constant access to your notes without interruption.
+          </p>
+          <p class="Paragraph">
+            <strong>Intuitive Interface:</strong> The app offers an intuitive user interface that simplifies the
+            creation, editing, and organization of notes, making it easy to jot down quick reminders or develop
+            detailed notes.
+          </p>
+          <p class="Paragraph">
+            <strong>Customizable Notes:</strong> Users can customize their notes with various formatting options,
+            and colors, allowing for efficient categorization and retrieval of information.
+          </p>
+          <p class="Paragraph">
+            <strong>Accessibility Features:</strong> Designed for accessibility, TapSticky offers keyboard shortcuts
+            and customizable settings to enhance user experience and workflow efficiency.
+          </p>
+
+          <h2>Use Cases</h2>
+          <p class="Paragraph"><strong>Personal Organization:</strong> Ideal for personal organization, from managing
+            daily tasks and
+            reminders to creating shopping lists and brainstorming ideas.</p>
+          <p class="Paragraph"><strong>Professional Use:</strong> Suitable for professionals needing to keep track of
+            meetings, project
+            notes, and important deadlines, enhancing productivity and workflow management.</p>
+
+        </div>
+      </div>
+      <div class="Flex1" style="margin: auto; padding-right: 30px;">
+        <img src="imgs/pin-feature.png" class="Responsive" style="max-width: 400px;" alt="Sticky Paper">
+      </div>
+    </div>
+
+    <div class="VBox InnerHBoxDiv" id="download-div">
+      <h2 class="SubHeader">Download</h2>
+
+      <table class="download-table">
+        <thead>
+          <tr>
+            <th class="table-header">File Type</th>
+            <th class="table-header">Version</th>
+            <th class="table-header">Download Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-cell">Executable (EXE)</td>
+            <td class="table-cell">v1.0.0</td>
+            <td class="table-cell">
+              <a href="/setups/Tap Sticky Setup 1.0.0.exe" download target="_blank" class="download-link">Download
+                EXE</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-cell">ZIP Archive</td>
+            <td class="table-cell">v1.0.0</td>
+            <td class="table-cell">
+              <a href="/setups/Tap_Sticky.zip" download target="_blank" class="download-link">Download ZIP</a>
+            </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="InnerHBoxDiv">
+    </div>
+
+    <div class="Header">
+      <button onclick="pvtHandleOnProfileBtnClick()" type="button" class="Header-Btns">
+        About Us
+      </button>
+    </div>
+  </div>
 </body>
+
+<script>
+  function pvtHandleOnProfileBtnClick() {
+    pvtInvokeLink('https://github.com/trineshl');
+  }
+
+  function pvtHandleOnReposBtnClick() {
+    pvtInvokeLink('https://github.com/trineshl/tap_sticky');
+  }
+
+  function pvtHandleOnDownloadBtnClick() {
+    pvtFocusDiv('download-div');
+  }
+
+  function pvtHandleOnOverviewBtnClick() {
+    pvtFocusDiv('overview-div');
+  }
+
+  function pvtHandleOnFeatureBtnClick() {
+    pvtFocusDiv('feature-div');
+  }
+
+  function pvtFocusDiv(p_strId) {
+
+    const LDiv = document.getElementById(p_strId);
+    LDiv.scrollIntoView({ behavior: 'smooth' });
+
+    // LDiv.setAttribute("style", "background: white;");
+    const LOldBg = LDiv.style.background;
+    LDiv.style.background = 'linear-gradient(to left, #f8e7d2, #ffd9ab)';
+
+    setTimeout(() => {
+      LDiv.style.background = LOldBg;
+    }, 1000);
+  }
+
+  function pvtInvokeLink(p_strURL) {
+
+    const LLink = document.createElement("a");
+    LLink.setAttribute("target", '_blank');
+    LLink.setAttribute("href", p_strURL);
+
+    LLink.click();
+  }
+</script>
+
 </html>

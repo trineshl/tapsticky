@@ -1,0 +1,117 @@
+.RootContainer {
+  background-color: rgb(249, 241, 228);
+  height: 100vh;
+  margin: 0;
+}
+
+.VBox {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.HBox {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.Flex1 {
+  flex: 1;
+}
+
+.CenterAndMiddle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OverFlowAuto {
+  overflow: auto;
+}
+
+.Header {
+  /* background: linear-gradient(to top, #ffbe6f, #ffd9ab); */
+  padding: 10px 30px;
+  background: linear-gradient(to right, #f8e7d2, #ffd9ab);
+  /* background: rgb(249, 241, 228); */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  font-size: larger;
+  padding: 0;
+}
+
+.Header-Btns {
+  background-color: inherit;
+  margin: 5px;
+  border: none;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.Header-Btns:hover {
+  /* text-decoration: underline; */
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.09);
+  /* Very light gray background on hover */
+}
+
+.Responsive {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Max-Content {
+  max-width: 500px;
+}
+
+.Paragraph {
+  padding: 5px;
+}
+
+.table-header {
+  padding: 12px;
+  text-align: left;
+  background: linear-gradient(to top, #ffbe6f, #ffd9ab);
+}
+
+.table-cell {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ffbe6f;
+}
+
+.download-link {
+  color: #007BFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* For mobile devices (phones) */
+@media (max-width: 599px) {
+  .HBox {
+    flex-direction: column;
+  }
+}
+
+a {
+  all: unset;
+  /* Reset all styles */
+}
+
+.SubHeader {}
+
+.InnerHBoxDiv {
+  margin: auto;
+  margin-top: 100px;
+}
